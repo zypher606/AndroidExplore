@@ -1,18 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="me.ashimrajkonwar.androidexplore.MainActivity">
 
-    <TextView
+    <FrameLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rootView">
+
+                <!--<TextureView-->
+                    <!--android:id="@+id/textureView"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"/>-->
+
+                <VideoView android:id="@+id/surface_view"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_gravity="center">
+                </VideoView>
+            </FrameLayout>
+        </LinearLayout>
+
+        <!--<VideoView android:id="@+id/surface_view"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="center">-->
+        <!--</VideoView>-->
+        <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:srcCompat="@drawable/img_cover"-->
+        <!--android:id="@+id/cover_img"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--/>-->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|right"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="79dp"
+                android:layout_height="30dp"
+                android:weightSum="1"
+                android:gravity="bottom|right">
+
+                <Button
+                    android:text="EDIT"
+                    android:layout_height="30dp"
+                    android:id="@+id/button"
+                    android:elevation="0dp"
+                    android:layout_width="79dp"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Subtitle.Inverse"
+                    android:background="@drawable/btn_cover_edit"
+                    android:drawableLeft="@android:drawable/presence_video_busy"
+                    android:textColor="#000"
+                    android:alpha="0.6"
+                    android:gravity="center_vertical|center_horizontal|center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="7dp"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="280dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_height="match_parent"
+                        android:layout_width="100dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="2dp"
+                            android:background="#fff">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/profile_pic"
+                                    android:id="@+id/imageView"
+                                    android:scaleType="centerCrop"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="bottom|right">
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="33dp"
+                                    android:layout_height="17dp">
+
+                                    <Button
+                                        android:layout_height="match_parent"
+                                        android:id="@+id/profile_pic_edit_btn"
+                                        android:elevation="0dp"
+                                        android:layout_width="match_parent"
+                                        style="@style/Widget.AppCompat.Button.Colored"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Subtitle.Inverse"
+                                        android:background="@drawable/btn_cover_edit"
+                                        android:textColor="#000"
+                                        android:alpha="0.6"
+                                        android:gravity="center_vertical|center_horizontal|center"
+                                        android:textSize="8sp"
+                                        android:text="EDIT"
+                                        android:paddingLeft="2dp">
+
+
+
+                                    </Button>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:text="Ashim Raj Konwar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView"
+                            android:minHeight="176dp"
+                            android:textColor="#fff"
+                            android:textSize="25sp"
+                            android:gravity="center_vertical" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
 </RelativeLayout>
