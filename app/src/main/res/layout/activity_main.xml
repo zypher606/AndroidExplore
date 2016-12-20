@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="me.ashimrajkonwar.androidexplore.MainActivity">
+    android:weightSum="1"
+    tools:context="me.ashimrajkonwar.androidexplore.MainActivity"
+    android:background="@color/profile_background">
+
+
+
+
 
     <FrameLayout
         android:layout_width="wrap_content"
@@ -29,24 +36,12 @@
 
                 <VideoView android:id="@+id/surface_view"
                 android:layout_width="match_parent"
-                android:layout_height="240dp"
+                android:layout_height="250dp"
                 android:layout_gravity="center">
                 </VideoView>
             </FrameLayout>
         </LinearLayout>
 
-        <!--<VideoView android:id="@+id/surface_view"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_gravity="center">-->
-        <!--</VideoView>-->
-        <!--<ImageView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--app:srcCompat="@drawable/img_cover"-->
-        <!--android:id="@+id/cover_img"-->
-        <!--android:scaleType="centerCrop"-->
-        <!--/>-->
 
         <LinearLayout
             android:orientation="horizontal"
@@ -183,4 +178,105 @@
 
     </FrameLayout>
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <Button
+                android:text="Followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button3"
+                android:layout_weight="1"
+                android:background="#f0f0f0"
+                android:textColor="@color/buttonColor"
+                android:textSize="@dimen/profile_nav_bar" />
+
+            <Button
+                android:text="Following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button4"
+                android:layout_weight="1"
+                android:background="#f0f0f0"
+                android:textColor="@color/buttonColor"
+                android:textSize="@dimen/profile_nav_bar" />
+
+            <Button
+                android:text="Media"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button5"
+                android:layout_weight="1"
+                android:background="#f0f0f0"
+                android:textColor="@color/buttonColor"
+                android:textSize="@dimen/profile_nav_bar" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.58"
+                android:background="@drawable/profile_about_background">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="You are ?"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_header"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/header_underline"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.04">
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.38"
+                android:background="@drawable/profile_search_background">
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

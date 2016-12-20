@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <color name="buttonColor">#636363</color>
+    <color name="profile_background">#d1d1d1</color>
+
+    <color name="text_header">#ff9640</color>
 </resources>
